@@ -20,6 +20,8 @@ def numeric_to_letter_grade(n):
         return "C-"
     elif n < 77:
         return "C"
+    elif n < 80:
+        return "C+"
     elif n < 84:
         return "B-"
     elif n < 87:
@@ -46,7 +48,9 @@ if __name__ == "__main__":
     print("THE FAHRENHEIT EQUIVALENT IS:", f, "DEGREES")
 
     print("--------------------")
-    score = 87.5
+    score = input("Please input a numeric letter grade (from 0 to 100): ") #87.5
+    print(type(score)) #> str
+    score = float(score)
     print("THE NUMERIC SCORE IS:", score)
     grade = numeric_to_letter_grade(score)
     print("THE LETTER-GRADE EQUIVALENT IS:", grade)
